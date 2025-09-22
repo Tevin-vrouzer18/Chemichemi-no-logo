@@ -1,0 +1,147 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Chemichemi Carwash App Design System */
+
+@layer base {
+  :root {
+    /* Chemichemi Light Theme - Clean & Professional */
+    --background: 0 0% 100%; /* white background */
+    --foreground: 228 33% 15%; /* dark navy text */
+
+    --card: 0 0% 98%; /* very light gray paper */
+    --card-foreground: 228 33% 15%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 228 33% 15%;
+
+    --primary: 180 100% 40%; /* darker cyan for better contrast */
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 228 20% 95%; /* very light navy */
+    --secondary-foreground: 228 33% 15%;
+
+    --muted: 228 20% 96%;
+    --muted-foreground: 228 15% 45%;
+
+    --accent: 180 100% 40%; /* darker cyan */
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 228 20% 90%;
+    --input: 228 20% 96%;
+    --ring: 180 100% 40%;
+
+    --radius: 0.75rem;
+
+    /* Success & Warning */
+    --success: 142 76% 36%;
+    --success-foreground: 0 0% 100%;
+    --warning: 38 92% 50%;
+    --warning-foreground: 0 0% 100%;
+
+    /* Currency & Business */
+    --currency: 180 100% 40%; /* darker cyan for better readability */
+    --profit: 142 76% 36%; /* green for profits */
+    --expense: 0 84% 60%; /* red for expenses */
+
+    /* Sidebar */
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 228 33% 20%;
+    --sidebar-primary: 180 100% 40%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 228 20% 95%;
+    --sidebar-accent-foreground: 228 33% 15%;
+    --sidebar-border: 228 20% 90%;
+    --sidebar-ring: 180 100% 40%;
+
+    /* Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(180 100% 40%), hsl(180 100% 50%));
+    --gradient-secondary: linear-gradient(135deg, hsl(0 0% 100%), hsl(228 20% 96%));
+    --gradient-card: linear-gradient(135deg, hsl(0 0% 98%), hsl(228 20% 96%));
+    
+    /* Shadows */
+    --shadow-cyan: 0 0 20px hsl(180 100% 40% / 0.2);
+    --shadow-card: 0 4px 20px hsl(228 20% 20% / 0.1);
+    --shadow-lg: 0 10px 30px hsl(228 20% 20% / 0.15);
+
+    /* Animations */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-bounce: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
+
+  .dark {
+    /* Chemichemi Dark Theme - Navy & Cyan */
+    --background: 228 33% 9%; /* #1e1e2f navy background */
+    --foreground: 0 0% 100%; /* white text */
+
+    --card: 228 50% 4%; /* #0a0a1a deep gray paper */
+    --card-foreground: 0 0% 100%;
+
+    --popover: 228 50% 4%;
+    --popover-foreground: 0 0% 100%;
+
+    --primary: 180 100% 50%; /* #00ffff cyan accent */
+    --primary-foreground: 228 33% 9%;
+
+    --secondary: 228 30% 15%; /* darker navy for secondary */
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 228 30% 12%;
+    --muted-foreground: 0 0% 70%;
+
+    --accent: 180 100% 50%; /* cyan */
+    --accent-foreground: 228 33% 9%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 228 30% 18%;
+    --input: 228 30% 15%;
+    --ring: 180 100% 50%;
+
+    /* Success & Warning */
+    --success: 142 76% 36%;
+    --success-foreground: 0 0% 100%;
+    --warning: 38 92% 50%;
+    --warning-foreground: 0 0% 100%;
+
+    /* Currency & Business */
+    --currency: 180 100% 50%; /* cyan for KES amounts */
+    --profit: 142 76% 36%; /* green for profits */
+    --expense: 0 84% 60%; /* red for expenses */
+
+    /* Sidebar */
+    --sidebar-background: 228 40% 6%;
+    --sidebar-foreground: 0 0% 90%;
+    --sidebar-primary: 180 100% 50%;
+    --sidebar-primary-foreground: 228 33% 9%;
+    --sidebar-accent: 228 30% 12%;
+    --sidebar-accent-foreground: 0 0% 100%;
+    --sidebar-border: 228 30% 18%;
+    --sidebar-ring: 180 100% 50%;
+
+    /* Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(180 100% 50%), hsl(180 80% 60%));
+    --gradient-secondary: linear-gradient(135deg, hsl(228 33% 9%), hsl(228 30% 15%));
+    --gradient-card: linear-gradient(135deg, hsl(228 50% 4%), hsl(228 40% 6%));
+    
+    /* Shadows */
+    --shadow-cyan: 0 0 30px hsl(180 100% 50% / 0.3);
+    --shadow-card: 0 10px 30px hsl(228 50% 2% / 0.5);
+    --shadow-lg: 0 20px 40px hsl(228 50% 2% / 0.6);
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}

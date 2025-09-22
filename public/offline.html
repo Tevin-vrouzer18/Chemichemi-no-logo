@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Offline - Chemichemi Carwash</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background: linear-gradient(135deg, #1e1e2f, #2a2a3e);
+      color: white;
+      margin: 0;
+      padding: 0;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    
+    .container {
+      text-align: center;
+      padding: 2rem;
+      max-width: 400px;
+    }
+    
+    .icon {
+      font-size: 4rem;
+      margin-bottom: 1rem;
+      opacity: 0.7;
+    }
+    
+    h1 {
+      color: #00ffff;
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+    
+    p {
+      color: #ccc;
+      line-height: 1.6;
+      margin-bottom: 2rem;
+    }
+    
+    .retry-btn {
+      background: linear-gradient(135deg, #00ffff, #00cccc);
+      color: #1e1e2f;
+      border: none;
+      padding: 1rem 2rem;
+      border-radius: 0.75rem;
+      font-weight: bold;
+      cursor: pointer;
+      transition: opacity 0.3s ease;
+    }
+    
+    .retry-btn:hover {
+      opacity: 0.9;
+    }
+    
+    .features {
+      margin-top: 2rem;
+      padding: 1rem;
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 0.75rem;
+      backdrop-filter: blur(10px);
+    }
+    
+    .features h3 {
+      color: #00ffff;
+      margin-bottom: 0.5rem;
+    }
+    
+    .features ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    
+    .features li {
+      padding: 0.25rem 0;
+      color: #ccc;
+      font-size: 0.9rem;
+    }
+    
+    .features li:before {
+      content: "✓ ";
+      color: #00ffff;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="icon">🚗</div>
+    <h1>You're Offline</h1>
+    <p>
+      No internet connection detected. Don't worry - Chemichemi Carwash works offline! 
+      Your data is safe and will sync when you're back online.
+    </p>
+    
+    <button class="retry-btn" onclick="window.location.reload()">
+      Try Again
+    </button>
+    
+    <div class="features">
+      <h3>Available Offline:</h3>
+      <ul>
+        <li>View dashboard and analytics</li>
+        <li>Manage appointments</li>
+        <li>Add customers and services</li>
+        <li>Track expenses and inventory</li>
+        <li>All data syncs automatically</li>
+      </ul>
+    </div>
+  </div>
+
+  <script>
+    // Auto-retry when connection is restored
+    window.addEventListener('online', () => {
+      window.location.reload();
+    });
+    
+    // Show connection status
+    function updateStatus() {
+      if (navigator.onLine) {
+        window.location.reload();
+      }
+    }
+    
+    // Check connection every 5 seconds
+    setInterval(updateStatus, 5000);
+  </script>
+</body>
+</html>
